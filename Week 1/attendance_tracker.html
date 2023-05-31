@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attendance Tracker</title>
+    <style>
+      form {
+        padding: 2.75em;
+        border: 2px black solid;
+      }
+      .center {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      label {
+        padding: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <select name="class" id="class">
+        <option value="eng101">ENG101</option>
+        <option value="mat182">MAT182</option>
+        <option value="com100">COM100</option>
+        <option value="csc205">CSC205</option>
+      </select>
+      <label for="date">Date</label>
+      <input type="date" name="date" id="date" />
+    </div>
+
+    <div class="center">
+      <form>
+        <input type="checkbox" id="student1" name="student1" value="Mike" />
+        <label for="student1"> Michael Jones</label><br />
+        <input type="checkbox" id="student2" name="student2" value="Harry" />
+        <label for="student2"> Harry Davidson</label><br />
+        <input type="checkbox" id="student3" name="student3" value="Jess" />
+        <label for="student3"> Jess Lawrence</label>
+      </form>
+    </div>
+  </body>
+</html>
