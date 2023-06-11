@@ -69,10 +69,6 @@ table {
     text-align: center;
 }
 
-#atLogo{
-
-}
-
 .center{
     display: flex;
     justify-content: center;
@@ -87,6 +83,7 @@ select option {
     padding: 3px;
 }
 
+/* Phone and Tablet*/
 @media screen and (max-width:884px)
 {
 
@@ -132,15 +129,7 @@ select option {
     select{
         padding: 10px;
     }
-    checkbox{
-
-    }
     
-}
-
-@media screen and (min-width:1024px) 
-{
-
 }
 
 
