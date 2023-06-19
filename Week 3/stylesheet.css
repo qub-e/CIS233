@@ -1,0 +1,90 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+}
+
+body {
+    background-image: url("images/jalosBackgroundNew.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+nav {}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    list-style-type: none;
+    background-color: coral;
+    border-radius: 15px 50px 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:active {
+    filter: grayscale(100%);
+}
+
+p {
+    padding: 3%;
+}
+
+@font-face {
+    font-family: JalosFont;
+    src: url("Headhunter-Regular.ttf")
+}
+
+@keyframes dropShadow {
+    from {
+        filter: drop-shadow(0px 0px coral);
+    }
+
+    to {
+        filter: drop-shadow(30px 10px coral);
+    }
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    max-width: 10vw;
+}
+
+.picture {
+    max-width: 10em;
+    float: left;
+    padding: 3%;
+}
+
+.picture:hover {
+    animation: dropShadow;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+
+}
+
+.nav_pic {
+    max-width: 3em;
+    border: 2px rgb(255, 105, 50) solid;
+    border-radius: 15px;
+}
+
+.image_group {
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+
+.city_info {
+    background: linear-gradient(to bottom, red, yellow);
+    border-radius: 15px 50px 30px;
+}
