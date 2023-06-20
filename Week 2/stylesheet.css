@@ -9,6 +9,7 @@
 
 body{
     margin: 0;
+    background-attachment: fixed;
 }
 
 main{
@@ -16,7 +17,6 @@ main{
     display: flex;
     justify-content: center;
     position: relative;
-    background-image: url('background.jpg');
     background-attachment: fixed;
 }
 
@@ -33,6 +33,10 @@ footer{
     display: grid;
     grid-template-columns: 75% 25%;
     background-color: rgb(0, 0, 0);
+}
+
+#logo{
+  max-width: 25%;
 }
 
 .nav_links{
@@ -67,10 +71,7 @@ a{
 calendar {
   display: grid;
   grid-template-columns: repeat(7, auto);
-  background-color: rgb(65, 65, 65);
   gap: 6px;
-  background-image: url('background.jpg');
-  background-attachment: fixed;
   padding: 5%;
 }
 
