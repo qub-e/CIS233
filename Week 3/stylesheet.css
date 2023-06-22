@@ -73,7 +73,7 @@ h3{
 .picture {
     max-width: 15em;
     float: left;
-    padding: 1%;
+    padding: 3%;
 }
 
 .nav_pic {
@@ -86,7 +86,8 @@ h3{
     justify-content: space-around;
     display: flex;
     flex-wrap: wrap;
-    padding: 5%;
+
+    width: 100%;
 }
 
 .city_info {
@@ -129,14 +130,14 @@ iframe{
     }
 
     .picture{
-        max-width: 10em;
+        max-width: 13em;
     }
 
     ul{
         max-width: 100%;
         justify-content: space-evenly;
         flex-wrap: wrap;
-        padding: 5%;
+        padding: 3%;
     }
 
     a{
@@ -168,7 +169,7 @@ iframe{
         font-size: 30px;
     }
     .picture{
-        max-width: 10em;
+        max-width: 9em;
     }
     #drop_nav{
         visibility: visible;
