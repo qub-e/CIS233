@@ -8,31 +8,97 @@
   </head>
   <body>
     <div class="center">
-        <img src="images/jalosLogo.png" alt="jalos_logo" id="logo">
+      <img src="images/jalosLogo.png" alt="jalos_logo" id="logo" />
     </div>
 
     <nav>
       <ul>
-          <li class="active"><a href="index.html"><img src="images/jalos1resized.jpg" alt "jalos1" class = "nav_pic"></a></li>
-          <li class="inactive"><a href="class.html">Class Maintenance</a></li>
-          <li class="inactive"><a href="student.html">Student Maintenance</a></li>
-          <li class="inactive"><a href="attendance.html">Attendance Taker</a></li>
+        <li class="active">
+          <a href="index.html"
+            ><img src="images/jalos1resized.jpg" alt="jalos1" class="nav_pic" />
+            <h3>Jalos, Mexico</h3></a
+          >
+        </li>
+        <li class="inactive">
+          <a href="mesa.html"
+            ><img src="images/Mesa.jpg" alt="mesa" class="nav_pic" />
+            <h3>Mesa, Arizona</h3></a
+          >
+        </li>
+        <li class="inactive">
+          <a href="sandiego.html"
+            ><img src="images/SanDiego.jpg" alt="cali" class="nav_pic" />
+            <h3>San Diego, California</h3></a
+          >
+        </li>
+        <li class="inactive">
+          <a href="waterford.html"
+            ><img src="images/waterford.jpg" alt="waterford" class="nav_pic" />
+            <h3>Waterford, Ireland</h3></a
+          >
+        </li>
+        <li class="inactive">
+          <a href="shibuya.html"
+            ><img src="images/shibuya.jpg" alt="shibuya" class="nav_pic" />
+            <h3>Shibuya, Japan</h3></a
+          >
+        </li>
       </ul>
     </nav>
 
-      <div class = "image_group">
-        <img src="images/jalos1resized.jpg" alt = "jalos1" class = "picture">
-        <img src="images/jalos2resized.jpg" alt = "jalos2" class = "picture">
-        <img src="images/jalos3resized.jpg" alt = "jalos3" class = "picture">
-      </div>
+    <select name="locations" onchange="location = this.value;" id="drop_nav">
+      <option value="">Select Location</option>
+      <option value="index.html">Jalostotitlán</option>
+      <option value="mesa.html">Mesa</option>
+      <option value="waterford.html">Waterford</option>
+      <option value="shibuya.html">Shibuya</option>
+    </select>
 
-    <div class = "city_info">
-      <img src="images/jalos4resized.jpg" alt = "jalos4" class="picture">
-      <p>Jalostotitlán is a municipality located in the state of Jalisco, Mexico. It is situated in the western part of the country, approximately 150 kilometers northeast of Guadalajara, the state capital. The town of Jalostotitlán itself serves as the municipal seat.
+    <h1>Pictures:</h1>
+    <div class="image_group">
+      <img src="images/jalos1resized.jpg" alt="jalos1" class="picture" />
+      <img src="images/jalos2resized.jpg" alt="jalos2" class="picture" />
+      <img src="images/jalos3resized.jpg" alt="jalos3" class="picture" />
+    </div>
 
-        Jalostotitlán is known for its rich cultural heritage and historical significance. It has a population of around 40,000 residents, and its economy is primarily based on agriculture, commerce, and small-scale industries. The region's fertile soil allows for the cultivation of various crops such as corn, beans, and wheat. 
-        The town hosts various festivals and celebrations throughout the year, showcasing the vibrant culture and traditions of the region. One of the most famous events is the Feria de la Primavera, an annual spring fair that features traditional music, dance performances, rodeo shows, and agricultural exhibitions. The fair attracts people from neighboring towns and cities, adding to the festive atmosphere.
+    <h1>Video:</h1>
+    <div class="center">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/lWZ0ZHsz7NQ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <div class="city_info">
+      <img src="images/jalos4resized.jpg" alt="jalos4" class="picture" />
+      <p>
+        Jalostotitlán is a municipality located in the state of Jalisco, Mexico.
+        It is situated in the western part of the country, approximately 150
+        kilometers northeast of Guadalajara, the state capital. The town of
+        Jalostotitlán itself serves as the municipal seat. Jalostotitlán is
+        known for its rich cultural heritage and historical significance. It has
+        a population of around 40,000 residents, and its economy is primarily
+        based on agriculture, commerce, and small-scale industries. The region's
+        fertile soil allows for the cultivation of various crops such as corn,
+        beans, and wheat. The town hosts various festivals and celebrations
+        throughout the year, showcasing the vibrant culture and traditions of
+        the region. One of the most famous events is the Feria de la Primavera,
+        an annual spring fair that features traditional music, dance
+        performances, rodeo shows, and agricultural exhibitions. The fair
+        attracts people from neighboring towns and cities, adding to the festive
+        atmosphere.
       </p>
+    </div>
+    <div class="center">
+      <div id="weather_info">
+        <img src="images/sunny_icon.png" alt="sun" id="weather_icon" />
+        <h1>92°, 5:11PM Sunny</h1>
+      </div>
     </div>
   </body>
 </html>
