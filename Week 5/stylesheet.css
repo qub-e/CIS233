@@ -1,0 +1,187 @@
+@font-face {
+    font-family: JalosFont;
+    src: url("Headhunter-Regular.ttf")
+}
+
+@font-face {
+    font-family: QuickSand;
+    src: url("Quicksand-Regular.otf")
+}
+
+* {
+    font-family: QuickSand;
+}
+
+body {
+    background-image: url("images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 5%;
+    font-size: 24px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+    background-color: coral; /* 1/5 of RGB Colors used */
+    border-radius: 15px 50px 30px;
+    padding-right:40px;
+}
+
+
+a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 5em;
+    padding: .5em;
+}
+
+.active {
+    filter: grayscale(100%);
+}
+
+.active h3{
+    color: rgb(253, 42, 0);
+}
+p {
+    padding: 3%;
+}
+
+
+h3{
+    color: rgb(255, 255, 255); /* 2/5 of RGB Colors */
+    text-align: center;
+    margin: 0;
+}
+
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    height: 10em;
+}
+
+.picture {
+    max-width: 15em;
+    float: left;
+    padding: 3%;
+}
+
+.nav_pic {
+    max-width: 5em;
+    border: 2px rgb(255, 105, 50) solid;
+    border-radius: 15px;
+}
+
+.image_group {
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+}
+
+.city_info {
+    background: linear-gradient(to bottom, rgb(255, 212, 143), rgb(255, 120, 93)); /* 3/5 and 4/5 of RGB Colors */
+    border-radius: 15px 50px 30px;
+}
+
+#drop_nav{
+    width: 100%;
+    visibility: hidden;
+    font-size: 32px;
+}
+
+#weather_info{
+    font-family: QuickSand;
+    background-color: rgb(255, 212, 143);
+    display: flex;
+    justify-content:flex-start;
+    border-radius: 15px;
+    width: 20em;
+}
+#weather_icon{
+    padding-top: .5em;
+    max-height: 10em;
+    filter: drop-shadow(3px 1px 0 rgb(253, 42, 0)); 
+    /* 5/5 RGB Color */
+}
+
+iframe{
+    padding-bottom: 5%;
+}
+
+/* For Tablets */
+@media screen and (max-width: 1024px) {
+    a{
+        font-size: 32px;
+    }
+    #logo{
+        max-height: 10em;
+    }
+
+    .picture{
+        max-width: 13em;
+    }
+
+    ul{
+        max-width: 100%;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        padding: 3%;
+    }
+
+    a{
+        width: 7em;
+        margin:5%;
+    }
+    .nav_pic{
+        max-width: 7em;
+    }
+}
+
+/* For Phones */
+@media screen and (max-width: 600px){
+    #logo{
+        height: 5em;
+    }
+    body{
+        font-size: 30px;
+    }
+    ul{
+        visibility: hidden;
+    }
+
+    nav{
+        width: 0;
+        height: 0;
+    }
+    h1{
+        font-size: 30px;
+    }
+    .picture{
+        max-width: 9em;
+    }
+    #drop_nav{
+        visibility: visible;
+    }
+    iframe{
+        padding: 15%;
+    }
+    #weather_icon{
+        max-height: 5em;
+    }
+    #weather_info{
+        width: unset;
+    }
+
+}
