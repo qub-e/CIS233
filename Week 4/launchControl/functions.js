@@ -4,6 +4,9 @@ let gasLevel = 0;
 let traction = 1;
 let park = 1;
 let battery = 0;
+let gearShift = 0;
+let gearDash = document.getElementById("mode");
+let gearImage = document.getElementById("bttn_shifter");
 
 function getGas(){
     if(gasLevel == 0){
@@ -55,4 +58,33 @@ function parkBrake(){
         document.getElementById("brake").src = "./assets/images/p0.png";
         document.getElementById("bttn_park").src = "./assets/images/bttn_park_0.png";
     }
+}
+
+function setMode(){
+
+    
+
+    switch(gearShift){
+        case 0: gearShift = 1;
+        gearDash.innerHTML = "ECO PRO";
+        gearImage.style.top = "720px"; 
+        break;
+
+        case 1: gearShift = 2;
+        gearDash.innerHTML = "COMFORT";
+        gearImage.style.top = "740px"; 
+        break;
+
+        case 2: gearShift = 3;
+        gearDash.innerHTML = "SPORT";
+        gearImage.style.top = "760px"; 
+        break;
+
+        default: gearShift = 0;
+        gearImage.style.top = "700px";
+        gearDash.innerHTML = "PARK";
+        break;
+    }
+
+    
 }
