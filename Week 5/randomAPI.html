@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cat Giphy API Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+      body {
+        background-color: aliceblue;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      }
+
+      h1 {
+        font-size: 5vw;
+      }
+      .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .cat-image {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        margin: 10px;
+        border: 3px black solid;
+      }
+
+      #catImages {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center"><h1>Cat Giphy API Example</h1></div>
+    <div id="catImages"></div>
+
+    <script>
+      // Your Giphy API key
+      const apiKey = "CqSCL8YJ7uB2mOoM5EdkdzcIRIYDP7dK";
+
+      // Request cat images from Giphy API
+      $.ajax({
+        url: `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=cats&limit=10`,
+        method: "GET",
+        success: function (response) {
+          const catImages = response.data;
+
+          // Display cat images
+          catImages.forEach(function (cat) {
+            const imageUrl = cat.images.fixed_height.url;
+            const imageAlt = cat.title;
+
+            const img = document.createElement("img");
+            img.src = imageUrl;
+            img.alt = imageAlt;
+            img.className = "cat-image";
+
+            document.getElementById("catImages").appendChild(img);
+          });
+        },
+        error: function () {
+          console.log(
+            "Error occurred while fetching cat images from Giphy API."
+          );
+        },
+      });
+    </script>
+  </body>
+</html>
