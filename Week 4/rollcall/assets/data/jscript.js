@@ -57,17 +57,28 @@ function getClass(objSemester){
 
     classId.length = 0;
 
-    if(blnOption){
-        option.value = 0;
-        option.text = 'Select a Class';
-        classId.add(option);
-    }
-
     for(x = 0; x < aryClasses.length;x++){
         let option = document.createElement('option');
         option.value = aryClasses[x][0];
         option.text = aryClasses[x][1];
         classId.add(option);
+    }
+    
+}
+
+function getStudent(objClass){
+    let classId = objClass.options[objClass.selectedIndex].value;
+    let aryStudents = eval(`ary${classId}`);
+    let studentId = document.getElementById('studentList');
+    let option = document.createElement('option');
+
+    studentId.length = 0;
+
+    for(x = 0; x < aryStudents.length;x++){
+        let option = document.createElement('option');
+        option.value = aryStudents[x][0];
+        option.text = aryStudents[x][1];
+        studentId.add(option);
     }
     
 }

@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-      <div class="center" onclick="setCity(1)">
+      <div class="center">
         <img src="images/jalosLogo.png" alt="jalos_logo" id="logo" />
       </div>
     </header>
@@ -16,37 +16,66 @@
     <nav>
       <ul>
         <li class="active">
-          <a href="index.html" onclick="setCity(1)" id="chip1"
-            ><img src="images/jalos1resized.jpg" alt="jalos1" class="nav_pic" />
-            <h3>Jalos, Mexico</h3></a
-          >
+          <img
+            src="images/jalos1resized.jpg"
+            alt="jalos1"
+            class="nav_pic"
+            onclick="setCity(1)"
+          />
+          <h3>Jalos, Mexico</h3>
         </li>
         <li class="inactive">
-          <a href="mesa.html" onclick="setCity(2)" id="chip2"
-            ><img src="images/Mesa.jpg" alt="mesa" class="nav_pic" />
+          <a href="mesa.html" id="chip2"
+            ><img
+              src="images/Mesa.jpg"
+              alt="mesa"
+              class="nav_pic"
+              onclick="setCity(2)"
+            />
             <h3>Mesa, Arizona</h3></a
           >
         </li>
         <li class="inactive">
-          <a href="sandiego.html" onclick="setCity(3)" id="chip3"
-            ><img src="images/SanDiego.jpg" alt="cali" class="nav_pic" />
+          <a href="sandiego.html" id="chip3"
+            ><img
+              src="images/SanDiego.jpg"
+              alt="cali"
+              class="nav_pic"
+              onclick="setCity(3)"
+            />
             <h3>San Diego, California</h3></a
           >
         </li>
         <li class="inactive">
-          <a href="waterford.html" onclick="setCity(4)" id="chip4"
-            ><img src="images/waterford.jpg" alt="waterford" class="nav_pic" />
+          <a href="waterford.html" id="chip4"
+            ><img
+              src="images/waterford.jpg"
+              alt="waterford"
+              class="nav_pic"
+              onclick="setCity(4)"
+            />
             <h3>Waterford, Ireland</h3></a
           >
         </li>
         <li class="inactive">
-          <a href="shibuya.html" onclick="setCity(5)" id="chip5"
-            ><img src="images/shibuya.jpg" alt="shibuya" class="nav_pic" />
+          <a href="shibuya.html" id="chip5"
+            ><img
+              src="images/shibuya.jpg"
+              alt="shibuya"
+              class="nav_pic"
+              onclick="setCity(5)"
+            />
             <h3>Shibuya, Japan</h3></a
           >
         </li>
       </ul>
     </nav>
+
+    <div id="city1">Jalostotitlán</div>
+    <div id="city2">Mesa</div>
+    <div id="city3">San Diego</div>
+    <div id="city4">Waterford</div>
+    <div id="city5">Shibuya</div>
 
     <select name="locations" onchange="location = this.value;" id="drop_nav">
       <option value="">Select Location</option>
