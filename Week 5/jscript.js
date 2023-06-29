@@ -6,22 +6,30 @@ function setCity(id){
         obj.style.display = 'none';
     }
 
+    alert(id);
+
     switch(id){
-        case 1: city = "Jalostotilan"; document.getElementById('city1').style.display = 'inline'; break;
-        case 2: city = "Mesa"; document.getElementById('city2').style.display = 'inline';break;
-        case 3: city = "San Diego"; document.getElementById('city3').style.display = 'inline';break;
-        case 4: city = "Waterford"; document.getElementById('city4').style.display = 'inline';break;
-        default: city = "Shibuya"; document.getElementById('city5').style.display = 'inline';break;
+        case 1: city = "Guadalajara"; 
+        document.getElementById('city1').style.display = 'inline'; 
+        document.getElementById('logo').src = "images/jalosLogo.png";
+        break;
+        case 2: city = "Mesa"; 
+        document.getElementById('city2').style.display = 'inline';
+        document.getElementById('logo').src = "images/mesaLogo.png";
+        break;
+        case 3: city = "San Diego"; 
+        document.getElementById('city3').style.display = 'inline';
+        document.getElementById('logo').src = "images/sandiegoLogo.png";
+        break;
+        case 4: city = "Waterford"; 
+        document.getElementById('city4').style.display = 'inline';
+        document.getElementById('logo').src = "images/waterfordLogo.png";
+        break;
+        default: city = "Shibuya";
+         document.getElementById('city5').style.display = 'inline';
+         document.getElementById('logo').src = "images/shibuyaLogo.png";
+        break;
     }
-
-        // for(var x = 1; x < 5; x++){
-        //     chipDiv = eval(`document.getElementById('chip${x}')`);
-
-        //     chipDiv.style.backgroundcolor = 'blue';
-
-        //     if(x == id){
-        //         chipDiv.style.backgroundcolor = 'red';
-        //     }
-        // }
-    
+    getWeatherData();
 }
+

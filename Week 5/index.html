@@ -15,127 +15,281 @@
 
     <nav>
       <ul>
-        <li class="active">
+        <li>
           <img
             src="images/jalos1resized.jpg"
             alt="jalos1"
             class="nav_pic"
-            onclick="setCity(1)"
+            onclick="setCity(1);"
           />
           <h3>Jalos, Mexico</h3>
         </li>
-        <li class="inactive">
-          <a href="mesa.html" id="chip2"
-            ><img
-              src="images/Mesa.jpg"
-              alt="mesa"
-              class="nav_pic"
-              onclick="setCity(2)"
-            />
-            <h3>Mesa, Arizona</h3></a
-          >
+        <li>
+          <img
+            src="images/Mesa.jpg"
+            alt="mesa"
+            class="nav_pic"
+            onclick="setCity(2);"
+          />
+          <h3>Mesa, Arizona</h3>
         </li>
-        <li class="inactive">
-          <a href="sandiego.html" id="chip3"
-            ><img
-              src="images/SanDiego.jpg"
-              alt="cali"
-              class="nav_pic"
-              onclick="setCity(3)"
-            />
-            <h3>San Diego, California</h3></a
-          >
+        <li>
+          <img
+            src="images/SanDiego.jpg"
+            alt="cali"
+            class="nav_pic"
+            onclick="setCity(3);"
+          />
+          <h3>San Diego, California</h3>
         </li>
-        <li class="inactive">
-          <a href="waterford.html" id="chip4"
-            ><img
-              src="images/waterford.jpg"
-              alt="waterford"
-              class="nav_pic"
-              onclick="setCity(4)"
-            />
-            <h3>Waterford, Ireland</h3></a
-          >
+        <li>
+          <img
+            src="images/waterford.jpg"
+            alt="waterford"
+            class="nav_pic"
+            onclick="setCity(4);"
+          />
+          <h3>Waterford, Ireland</h3>
         </li>
-        <li class="inactive">
-          <a href="shibuya.html" id="chip5"
-            ><img
-              src="images/shibuya.jpg"
-              alt="shibuya"
-              class="nav_pic"
-              onclick="setCity(5)"
-            />
-            <h3>Shibuya, Japan</h3></a
-          >
+        <li>
+          <img
+            src="images/shibuya.jpg"
+            alt="shibuya"
+            class="nav_pic"
+            onclick="setCity(5)"
+          />
+          <h3>Shibuya, Japan</h3>
         </li>
       </ul>
     </nav>
 
-    <div id="city1">Jalostotitlán</div>
-    <div id="city2">Mesa</div>
-    <div id="city3">San Diego</div>
-    <div id="city4">Waterford</div>
-    <div id="city5">Shibuya</div>
-
-    <select name="locations" onchange="location = this.value;" id="drop_nav">
-      <option value="">Select Location</option>
-      <option value="index.html">Jalostotitlán</option>
-      <option value="mesa.html">Mesa</option>
-      <option value="waterford.html">Waterford</option>
-      <option value="shibuya.html">Shibuya</option>
+    <select name="locations" id="drop_nav" onchange="setCity(this.value)">
+      <option value="0">Select Location</option>
+      <option value="1">Jalostotitlán</option>
+      <option value="2">Mesa</option>
+      <option value="3">San Diego</option>
+      <option value="4">Waterford</option>
+      <option value="5">Shibuya</option>
     </select>
 
-    <h1>Pictures:</h1>
-    <div class="image_group">
-      <img src="images/jalos1resized.jpg" alt="jalos1" class="picture" />
-      <img src="images/jalos2resized.jpg" alt="jalos2" class="picture" />
-      <img src="images/jalos3resized.jpg" alt="jalos3" class="picture" />
-    </div>
+    <div id="city1">
+      <h1>Pictures:</h1>
+      <div class="image_group">
+        <img src="images/jalos1resized.jpg" alt="jalos1" class="picture" />
+        <img src="images/jalos2resized.jpg" alt="jalos2" class="picture" />
+        <img src="images/jalos3resized.jpg" alt="jalos3" class="picture" />
+      </div>
 
-    <h1>Video:</h1>
-    <div class="center">
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/lWZ0ZHsz7NQ"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
-    </div>
+      <h1>Video:</h1>
+      <div class="center">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/lWZ0ZHsz7NQ"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
 
-    <article>
+      <article>
+        <div class="city_info">
+          <img src="images/jalos4resized.jpg" alt="jalos4" class="picture" />
+          <p>
+            Jalostotitlán is a municipality located in the state of Jalisco,
+            Mexico. It is situated in the western part of the country,
+            approximately 150 kilometers northeast of Guadalajara, the state
+            capital. The town of Jalostotitlán itself serves as the municipal
+            seat. Jalostotitlán is known for its rich cultural heritage and
+            historical significance. It has a population of around 40,000
+            residents, and its economy is primarily based on agriculture,
+            commerce, and small-scale industries. The region's fertile soil
+            allows for the cultivation of various crops such as corn, beans, and
+            wheat. The town hosts various festivals and celebrations throughout
+            the year, showcasing the vibrant culture and traditions of the
+            region. One of the most famous events is the Feria de la Primavera,
+            an annual spring fair that features traditional music, dance
+            performances, rodeo shows, and agricultural exhibitions. The fair
+            attracts people from neighboring towns and cities, adding to the
+            festive atmosphere.
+          </p>
+        </div>
+      </article>
+    </div>
+    <div id="city2">
+      <h1>Pictures:</h1>
+      <div class="image_group">
+        <img src="images/mesa1.jpg" alt="mesa1" class="picture" />
+        <img src="images/mesa2.jpg" alt="mesa2" class="picture" />
+        <img src="images/mesa3.jpg" alt="mesa3" class="picture" />
+      </div>
+
       <div class="city_info">
-        <img src="images/jalos4resized.jpg" alt="jalos4" class="picture" />
+        <img src="images/mesa4.jpg" alt="mesa4" class="picture" />
         <p>
-          Jalostotitlán is a municipality located in the state of Jalisco,
-          Mexico. It is situated in the western part of the country,
-          approximately 150 kilometers northeast of Guadalajara, the state
-          capital. The town of Jalostotitlán itself serves as the municipal
-          seat. Jalostotitlán is known for its rich cultural heritage and
-          historical significance. It has a population of around 40,000
-          residents, and its economy is primarily based on agriculture,
-          commerce, and small-scale industries. The region's fertile soil allows
-          for the cultivation of various crops such as corn, beans, and wheat.
-          The town hosts various festivals and celebrations throughout the year,
-          showcasing the vibrant culture and traditions of the region. One of
-          the most famous events is the Feria de la Primavera, an annual spring
-          fair that features traditional music, dance performances, rodeo shows,
-          and agricultural exhibitions. The fair attracts people from
-          neighboring towns and cities, adding to the festive atmosphere.
+          Mesa is a vibrant city located in the state of Arizona, USA. It is the
+          third-largest city in Arizona and a part of the Phoenix metropolitan
+          area. With its sunny climate, beautiful desert landscapes, and a wide
+          range of attractions and activities, Mesa offers something for
+          everyone. One of the prominent features of Mesa is its stunning
+          natural surroundings. The city is situated in the Sonoran Desert,
+          known for its unique flora and fauna. Visitors can explore the
+          desert's beauty through hiking and biking trails in the nearby
+          Superstition Mountains and Usery Mountain Regional Park. These areas
+          provide opportunities for outdoor adventures, including rock climbing,
+          camping, and wildlife spotting. For those seeking cultural
+          experiences, Mesa offers a vibrant arts and cultural scene. The Mesa
+          Arts Center is a hub for performing arts, hosting a variety of shows,
+          concerts, and theatrical performances throughout the year. The center
+          also features rotating exhibits showcasing the works of local and
+          international artists. With its warm climate and abundant sunshine,
+          Mesa also offers a thriving agritourism scene. Visitors can explore
+          local farms and orchards, participate in seasonal harvest events, and
+          enjoy fresh produce and homemade goods at farmers' markets. In
+          summary, Mesa, Arizona, offers a diverse range of attractions and
+          activities. From outdoor adventures and cultural experiences to
+          family-friendly entertainment and a thriving downtown scene, Mesa
+          provides a dynamic and enjoyable destination for visitors of all
+          interests.
         </p>
       </div>
-    </article>
+    </div>
+    <div id="city3">
+      <h1>Pictures:</h1>
+      <div class="image_group">
+        <img src="images/sandiego1.jpg" alt="sandiego1" class="picture" />
+        <img src="images/sandiego2.jpg" alt="sandiego2" class="picture" />
+        <img src="images/sandiego3.jpg" alt="sandiego3" class="picture" />
+      </div>
+
+      <div class="city_info">
+        <img src="images/sandiego4.jpg" alt="sandiego4" class="picture" />
+        <p>
+          San Diego is a vibrant coastal city located in Southern California,
+          known for its stunning beaches, pleasant weather, and a diverse array
+          of attractions. With its laid-back atmosphere and a mix of cultural,
+          outdoor, and culinary offerings, San Diego has something to offer for
+          everyone. Visitors can explore the beautiful beaches, such as Mission
+          Beach, La Jolla Cove, and Coronado Beach, which are perfect for
+          sunbathing, swimming, and surfing. The city is also home to the famous
+          San Diego Zoo, renowned for its extensive collection of animals and
+          conservation efforts. Balboa Park, a cultural oasis, features numerous
+          museums, gardens, and the iconic California Tower, providing visitors
+          with an enriching experience. San Diego's culinary scene is a true
+          delight, with a wide range of dining options to satisfy every palate.
+          The city's proximity to the ocean ensures fresh seafood dishes, while
+          its diverse population brings a fusion of international flavors. From
+          trendy gastropubs and craft breweries to upscale restaurants and
+          vibrant food markets, San Diego offers a gastronomic adventure for
+          food lovers. Additionally, San Diego hosts various annual events and
+          festivals that showcase its cultural diversity and lively spirit. The
+          Comic-Con International, held annually, attracts comic book
+          enthusiasts and pop culture fans from around the world. The Old Town
+          San Diego State Historic Park, a living museum, provides a glimpse
+          into the city's rich history and Mexican heritage. In summary, San
+          Diego combines stunning beaches, a thriving cultural scene, and
+          culinary delights to create a unique and exciting destination. Whether
+          you're looking for outdoor activities, cultural experiences, or
+          indulging in delicious cuisine, San Diego offers a perfect blend of
+          sun, surf, and diverse attractions.
+        </p>
+      </div>
+    </div>
+    <div id="city4">
+      <h1>Pictures:</h1>
+      <div class="image_group">
+        <img src="images/waterford1.jpg" alt="waterford1" class="picture" />
+        <img src="images/waterford2.jpg" alt="waterford2" class="picture" />
+        <img src="images/waterford3.jpg" alt="waterford3" class="picture" />
+      </div>
+
+      <div class="city_info">
+        <img src="images/waterford4.jpg" alt="waterford4" class="picture" />
+        <p>
+          Waterford is a vibrant city located in the southeastern part of
+          Ireland. It is the oldest city in the country, founded by the Vikings
+          in the 9th century, and holds a rich history that is evident in its
+          architecture and cultural heritage. With a population of around
+          54,000, Waterford offers a mix of historical landmarks, natural
+          beauty, artistic endeavors, and a warm Irish welcome. The city is
+          renowned for its intricate crystal craftsmanship. Waterford Crystal,
+          one of the most famous crystal manufacturers in the world, has its
+          origins here. Visitors can tour the Waterford Crystal Visitor Centre
+          to witness the exquisite artistry and learn about the history and
+          techniques behind crystal production. The center also features a
+          retail store where visitors can purchase stunning crystal pieces.
+          Waterford's natural surroundings provide ample opportunities for
+          outdoor activities. The city is situated on the banks of the River
+          Suir, offering picturesque waterfront views and opportunities for
+          river cruises and water-based adventures. Nearby, the Comeragh
+          Mountains provide hiking and trekking trails, rewarding visitors with
+          stunning vistas and hidden lakes. In summary, Waterford offers a
+          charming blend of history, culture, natural beauty, artistic
+          expression, and warm Irish hospitality. From exploring its Viking past
+          and admiring crystal craftsmanship to immersing in the local food and
+          music scene, visitors to Waterford are sure to have an enriching and
+          memorable experience.
+        </p>
+      </div>
+    </div>
+    <div id="city5">
+      <h1>Pictures:</h1>
+      <div class="image_group">
+        <img src="images/shibuya1.jpg" alt="shibuya1" class="picture" />
+        <img src="images/shibuya2.jpg" alt="shibuya2" class="picture" />
+        <img src="images/shibuya3.jpg" alt="shibuya3" class="picture" />
+      </div>
+
+      <div class="city_info">
+        <img src="images/shibuya4.jpg" alt="shibuya4" class="picture" />
+        <p>
+          Shibuya is a bustling neighborhood located in Tokyo, Japan, known for
+          its vibrant atmosphere, trendy fashion, and iconic pedestrian
+          crossing. It is a hub of youth culture and entertainment, offering a
+          mix of shopping, dining, and nightlife experiences. The iconic Shibuya
+          Crossing, known as "The Scramble," is a must-visit attraction where
+          pedestrians flood the intersection from all directions, creating a
+          mesmerizing spectacle. Surrounding the crossing, visitors can explore
+          a plethora of shops, department stores, and boutiques offering the
+          latest fashion trends, electronics, and unique souvenirs. Moreover,
+          Shibuya is a center for subcultures and street fashion, with trendy
+          boutiques and iconic department stores such as Shibuya 109. Fashion
+          enthusiasts can discover the latest trends and unique styles in the
+          many shops lining the streets. The neighborhood is also a hub for
+          technology and entertainment, with numerous arcades, karaoke bars, and
+          gaming centers where visitors can immerse themselves in the world of
+          Japanese pop culture. In summary, Shibuya offers a dynamic and lively
+          experience for visitors seeking a blend of fashion, entertainment, and
+          urban culture. With its bustling streets, vibrant nightlife, and
+          trendy shops, Shibuya is an iconic destination that encapsulates the
+          energy and modernity of Tokyo.
+        </p>
+      </div>
+    </div>
 
     <footer>
       <div class="center">
         <div id="weather_info">
-          <img src="images/sunny_icon.png" alt="sun" id="weather_icon" />
-          <h1>92°, 5:11PM Sunny</h1>
+          <h2>Current Weather</h2>
+          <img
+            src="https://openweathermap.org/img/wn/10d@2x.png"
+            id="weather_icon"
+          />
+          <p id="temperature">Temperature: &deg;C</p>
+          <p id="location">Location:</p>
+
+          <p id="description">Description:</p>
         </div>
       </div>
     </footer>
+
+    <script src="weather.js"></script>
     <script src="jscript.js"></script>
+
+    <script>
+      setCity(1);
+      getWeatherData();
+    </script>
   </body>
 </html>
