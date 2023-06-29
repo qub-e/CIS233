@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather App</title>
+    <style>
+      #location-btn {
+        margin-bottom: 10px;
+      }
+
+      #weather-info {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Weather App</h1>
+
+    <table>
+      <tr>
+        <td>
+          <input type="text" id="cityName" placeholder="Type City Name" />
+        </td>
+        <td><button onclick="getWeatherData()">Get Weather</button></td>
+      </tr>
+    </table>
+    <button id="location-btn">Get My Current Location</button>
+
+    <div id="weather-info">
+      <h2>Current Weather</h2>
+      <p>Location: <span id="location"></span></p>
+      <p>Temperature: <span id="temperature"></span>&deg;C</p>
+      <p>Description: <span id="description"></span></p>
+    </div>
+
+    <script>
+      // Function to get weather data from OpenWeather API
+      function getWeatherData(latitude, longitude) {
+        const apiKey = "d0de9e699e0a53d46aaf9dc18db5b62c";
+        var cityName = document.getElementById("cityName").value;
+
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=imperial`;
+        // Fetch weather data
+        fetch(apiUrl)
+          .then((response) => response.json())
+          .then((data) => {
+            // Update weather information on the page
+            document.getElementById("location").textContent = data.name;
+            document.getElementById("temperature").textContent = data.main.temp;
+            document.getElementById("description").textContent =
+              data.weather[0].description;
+
+            // Show weather information
+            document.getElementById("weather-info").style.display = "block";
+          })
+          .catch((error) => {
+            console.log("Error occurred while fetching weather data:", error);
+          });
+      }
+
+      // Attach click event listener to the location button
+      document
+        .getElementById("location-btn")
+        .addEventListener("click", getLocation);
+    </script>
+  </body>
+</html>
