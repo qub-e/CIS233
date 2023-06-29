@@ -76,6 +76,7 @@ h3{
     max-width: 5em;
     border: 2px rgb(255, 105, 50) solid;
     border-radius: 15px;
+    filter: grayscale(0%);
 
 }
 
@@ -92,6 +93,12 @@ h3{
     border-radius: 15px 50px 30px;
 }
 
+.flex_row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
 #drop_nav{
     width: 100%;
     visibility: hidden;
@@ -103,14 +110,17 @@ h3{
     background-color: rgb(255, 212, 143);
     display: flex;
     justify-content:space-around;
+    flex-direction: column;
     border-radius: 15px;
     width: 20em;
     flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
 }
+
 #weather_icon{
-    height: 10em;
+    width: 6em;
     filter: drop-shadow(3px 1px 0 rgb(253, 42, 0)); 
-    box-sizing: border-box
 }
 #temperature{
     font-size: 64px;
@@ -121,7 +131,12 @@ h3{
 #description{
     font-size: 48px;
 }
-
+#lon{
+    font-size: 48px;
+}
+#lat{
+    font-size: 52px;
+}
 iframe{
     padding-bottom: 5%;
 }
@@ -180,19 +195,10 @@ iframe{
         padding: 15%;
     }
     #weather_icon{
-        max-height: 5em;
+        width: 5em;
     }
     #weather_info{
         width: 15em;
-    }
-    #temperature{
-        font-size: unset;
-    }
-    #location{
-        font-size: unset;
-    }
-    #description{
-        font-size: unset;
     }
 
 }

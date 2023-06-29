@@ -18,7 +18,7 @@
         <li>
           <img
             src="images/jalos1resized.jpg"
-            alt="jalos1"
+            id="jalos1"
             class="nav_pic"
             onclick="setCity(1);"
           />
@@ -27,7 +27,7 @@
         <li>
           <img
             src="images/Mesa.jpg"
-            alt="mesa"
+            id="mesa"
             class="nav_pic"
             onclick="setCity(2);"
           />
@@ -36,7 +36,7 @@
         <li>
           <img
             src="images/SanDiego.jpg"
-            alt="cali"
+            id="cali"
             class="nav_pic"
             onclick="setCity(3);"
           />
@@ -45,7 +45,7 @@
         <li>
           <img
             src="images/waterford.jpg"
-            alt="waterford"
+            id="waterford"
             class="nav_pic"
             onclick="setCity(4);"
           />
@@ -54,7 +54,7 @@
         <li>
           <img
             src="images/shibuya.jpg"
-            alt="shibuya"
+            id="shibuya"
             class="nav_pic"
             onclick="setCity(5)"
           />
@@ -63,7 +63,7 @@
       </ul>
     </nav>
 
-    <select name="locations" id="drop_nav" onchange="setCity(this.value)">
+    <select name="locations" id="drop_nav" onchange="setCity(this.value);">
       <option value="0">Select Location</option>
       <option value="1">Jalostotitlán</option>
       <option value="2">Mesa</option>
@@ -272,14 +272,18 @@
       <div class="center">
         <div id="weather_info">
           <h2>Current Weather</h2>
-          <img
-            src="https://openweathermap.org/img/wn/10d@2x.png"
-            id="weather_icon"
-          />
-          <p id="temperature">Temperature: &deg;C</p>
-          <p id="location">Location:</p>
-
-          <p id="description">Description:</p>
+          <div class="flex_row">
+            <img
+              src="https://openweathermap.org/img/wn/10d@2x.png"
+              id="weather_icon"
+            />
+            <h1><span id="temperature"></span>&deg;C</h1>
+          </div>
+          <p>Location: </br><span id="location"></span></p>
+          <p>Sky: </br><span id="description"></span></p>
+          <p>
+            Coordinates: </br><span id="lon"></span>Lon <span id="lat"></span>Lat
+          </p>
         </div>
       </div>
     </footer>
@@ -289,7 +293,6 @@
 
     <script>
       setCity(1);
-      getWeatherData();
     </script>
   </body>
 </html>
